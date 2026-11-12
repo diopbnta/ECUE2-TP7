@@ -6,6 +6,14 @@ import java.util.Iterator;
 import java.util.Collections;
 import java.util.Set;
 
+
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.ArrayList;
+import java.util.Collections;
+
+import net.lecnam.ecue2.tp7.film.Film;
+
 import net.lecnam.ecue2.tp7.nuancier.Nuancier;
 
 public class Execute {
@@ -15,8 +23,8 @@ public class Execute {
         //exercice1();
 
         //exercice2();
-        exercice3();
-        //exercice4();
+        //exercice3();
+        exercice4();
         //exercice5();
         //exercice6();
     }
@@ -114,9 +122,51 @@ public class Execute {
     }
 
 
+
     private static void exercice4() {
 
+        // Création de plusieurs films
+        Film film1 = new Film("Les Évadés", "Frank Darabont", 1994);
+        Film film2 = new Film("Le Parrain", "Francis Ford Coppola", 1972);
+        Film film3 = new Film("The Dark Knight", "Christopher Nolan", 2008);
+        Film film4 = new Film("Forrest Gump", "Robert Zemeckis", 1994);
+        Film film5 = new Film("Inception", "Christopher Nolan", 2010);
+        Film film6 = new Film("Interstellar", "Christopher Nolan", 2014);
+
+        // Création d'une collection naturellement triée
+        Set<Film> films = new TreeSet<>();
+
+        // Ajout des films
+        films.add(film1);
+        films.add(film2);
+        films.add(film3);
+        films.add(film4);
+        films.add(film5);
+        films.add(film6);
+
+        // Affichage de la collection triée
+        System.out.println("Films triés par année croissante :");
+
+        for (Film film : films) {
+            System.out.println(film);
+        }
+
+        System.out.println("----------------");
+
+        // Création d'une ArrayList à partir du TreeSet
+        ArrayList<Film> listeFilms = new ArrayList<>(films);
+
+        // Inversion de l'ordre de la liste
+        Collections.reverse(listeFilms);
+
+        // Affichage de l'ArrayList inversée
+        System.out.println("Films triés par année décroissante :");
+
+        for (Film film : listeFilms) {
+            System.out.println(film);
+        }
     }
+
 
     private static void exercice5() {
 
