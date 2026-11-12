@@ -2,6 +2,11 @@ package net.lecnam.ecue2.tp7.nuancier;
 
 
 
+import java.util.Set;
+import java.util.TreeSet;
+
+
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,4 +39,10 @@ public class Nuancier {
     public List<String> getCouleurs() {
         return couleurs;
     }
+    // À ajouter dans la classe Nuancier
+
+    public Set<String> getCouleursTreeSet() {
+        return new TreeSet<>(couleurs);
+    }
+
 }
