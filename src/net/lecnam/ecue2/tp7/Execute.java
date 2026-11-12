@@ -14,8 +14,8 @@ public class Execute {
 
         //exercice1();
 
-        exercice2();
-        //exercice3();
+        //exercice2();
+        exercice3();
         //exercice4();
         //exercice5();
         //exercice6();
@@ -100,9 +100,19 @@ public class Execute {
 
     }
 
+
     private static void exercice3() {
 
+        // Création d'un objet Nuancier
+        Nuancier nuancier = new Nuancier();
+
+        // Recherche de la couleur correspondant à r
+        String couleur = nuancier.getCouleurFromCode('r');
+
+        // Affichage du résultat
+        System.out.println("La couleur correspondant à r est : " + couleur);
     }
+
 
     private static void exercice4() {
 
